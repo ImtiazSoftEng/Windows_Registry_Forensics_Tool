@@ -1,7 +1,7 @@
 from backend.live_registry.system_info import SystemInfoReader
 from backend.live_registry.installed_software import InstalledSoftwareReader
 from backend.live_registry.startup_programs import StartupProgramsReader
-
+from backend.live_registry.usb_devices import USBDevicesReader
 def print_system_info():
     """
     Print system information in readable format.
@@ -73,6 +73,42 @@ def print_installed_software():
         print("-" * 70)
 
     print("\nInstalled software scan completed successfully.")
+def print_usb_devices():
+    """
+    Print USB devices in readable format.
+    """
+    reader = USBDevicesReader()
+    data = reader.read_usb_devices()
+
+    print("=" * 70)
+    print("USB Devices Scan")
+    print("=" * 70)
+
+    print("Total USB Devices Found:", data["total_usb_devices"])
+    print("-" * 70)
+
+    if data["total_usb_devices"] == 0:
+        print("No USB storage devices found.")
+        print("Try running PowerShell as Administrator.")
+        return
+
+    for index, usb in enumerate(data["usb_devices"], start=1):
+        print(f"\nUSB Device #{index}")
+        print("Device Name        :", usb["device_name"])
+        print("Vendor             :", usb["vendor"])
+        print("Product            :", usb["product"])
+        print("Revision           :", usb["revision"])
+        print("Serial Number      :", usb["serial_number"])
+        print("Friendly Name      :", usb["friendly_name"])
+        print("Device Description :", usb["device_description"])
+        print("Manufacturer       :", usb["manufacturer"])
+        print("Class GUID         :", usb["class_guid"])
+        print("Last Write Time    :", usb["last_write_time"])
+        print("Registry Root      :", usb["registry_root"])
+        print("Registry Path      :", usb["registry_path"])
+        print("-" * 70)
+
+    print("\nUSB devices scan completed successfully.")    
 
 def print_startup_programs():
     """
@@ -91,7 +127,42 @@ def print_startup_programs():
     if data["total_startup_programs"] == 0:
         print("No startup programs found.")
         return
+    def print_usb_devices():
+        """
+        Print USB devices in readable format.
+        """
+    reader = USBDevicesReader()
+    data = reader.read_usb_devices()
 
+    print("=" * 70)
+    print("USB Devices Scan")
+    print("=" * 70)
+
+    print("Total USB Devices Found:", data["total_usb_devices"])
+    print("-" * 70)
+
+    if data["total_usb_devices"] == 0:
+        print("No USB storage devices found.")
+        print("Try running PowerShell as Administrator.")
+        return
+
+    for index, usb in enumerate(data["usb_devices"], start=1):
+        print(f"\nUSB Device #{index}")
+        print("Device Name        :", usb["device_name"])
+        print("Vendor             :", usb["vendor"])
+        print("Product            :", usb["product"])
+        print("Revision           :", usb["revision"])
+        print("Serial Number      :", usb["serial_number"])
+        print("Friendly Name      :", usb["friendly_name"])
+        print("Device Description :", usb["device_description"])
+        print("Manufacturer       :", usb["manufacturer"])
+        print("Class GUID         :", usb["class_guid"])
+        print("Last Write Time    :", usb["last_write_time"])
+        print("Registry Root      :", usb["registry_root"])
+        print("Registry Path      :", usb["registry_path"])
+        print("-" * 70)
+
+    print("\nUSB devices scan completed successfully.")
     for index, program in enumerate(data["startup_programs"], start=1):
         print(f"\nStartup Program #{index}")
         print("Program Name  :", program["program_name"])
@@ -109,7 +180,8 @@ def main():
         print("1. System Information")
         print("2. Installed Software")
         print("3. Startup Programs")
-        print("4. Exit")
+        print("4. USB Devices")
+        print("5. Exit")
 
         choice = input("\nEnter choice: ")
 
@@ -123,6 +195,9 @@ def main():
             print_startup_programs()
 
         elif choice == "4":
+            print_usb_devices()
+
+        elif choice == "5":
             print("Exiting tool...")
             break
 
