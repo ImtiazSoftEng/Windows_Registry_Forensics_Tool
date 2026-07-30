@@ -2,6 +2,7 @@ import os
 import platform
 import ctypes
 from backend.live_registry.common_reader import CommonRegistryReader
+from datetime import datetime
 
 
 class SystemInfoReader:
@@ -32,7 +33,8 @@ class SystemInfoReader:
         current_build = self.reader.get_single_value("HKLM", path, "CurrentBuild")
         ubr = self.reader.get_single_value("HKLM", path, "UBR")
         edition_id = self.reader.get_single_value("HKLM", path, "EditionID")
-        install_date = self.reader.get_single_value("HKLM", path, "InstallDate")
+        install_date_raw = self.reader.get_single_value("HKLM", path, "InstallDate")
+        install_date = self.convert_timestamp(install_date_raw)
         system_root = self.reader.get_single_value("HKLM", path, "SystemRoot")
 
         return {
@@ -68,7 +70,20 @@ class SystemInfoReader:
             "time_zone": time_zone,
             "standard_name": standard_name
         }
+    
 
+    def convert_timestamp(self, timestamp):
+        """
+        Convert Windows InstallDate timestamp into readable date.
+        """
+        try:
+            if timestamp is None:
+                return None
+
+            return datetime.fromtimestamp(int(timestamp)).strftime("%Y-%m-%d %H:%M:%S")
+
+        except Exception:
+            return timestamp
     def get_current_user_info(self):
         """
         Read current logged-in user information.
@@ -99,3 +114,4 @@ class SystemInfoReader:
             "processor": platform.processor(),
             "machine": platform.machine()
         }
+    
