@@ -1,6 +1,6 @@
 from backend.live_registry.system_info import SystemInfoReader
 from backend.live_registry.installed_software import InstalledSoftwareReader
-
+from backend.live_registry.startup_programs import StartupProgramsReader
 
 def print_system_info():
     """
@@ -74,13 +74,42 @@ def print_installed_software():
 
     print("\nInstalled software scan completed successfully.")
 
+def print_startup_programs():
+    """
+    Print startup programs in readable format.
+    """
+    reader = StartupProgramsReader()
+    data = reader.get_startup_programs()
 
+    print("=" * 70)
+    print("Startup Programs Scan")
+    print("=" * 70)
+
+    print("Total Startup Programs Found:", data["total_startup_programs"])
+    print("-" * 70)
+
+    if data["total_startup_programs"] == 0:
+        print("No startup programs found.")
+        return
+
+    for index, program in enumerate(data["startup_programs"], start=1):
+        print(f"\nStartup Program #{index}")
+        print("Program Name  :", program["program_name"])
+        print("Command       :", program["command"])
+        print("Scope         :", program["scope"])
+        print("Registry View :", program["registry_view"])
+        print("Registry Root :", program["registry_root"])
+        print("Value Type    :", program["value_type"])
+        print("Registry Path :", program["registry_path"])
+        print("-" * 70)
+
+    print("\nStartup programs scan completed successfully.")
 def main():
     while True:
-        print("\nSelect Option:")
         print("1. System Information")
         print("2. Installed Software")
-        print("3. Exit")
+        print("3. Startup Programs")
+        print("4. Exit")
 
         choice = input("\nEnter choice: ")
 
@@ -91,6 +120,9 @@ def main():
             print_installed_software()
 
         elif choice == "3":
+            print_startup_programs()
+
+        elif choice == "4":
             print("Exiting tool...")
             break
 
