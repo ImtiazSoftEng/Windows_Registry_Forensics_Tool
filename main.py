@@ -2,6 +2,7 @@ from backend.live_registry.system_info import SystemInfoReader
 from backend.live_registry.installed_software import InstalledSoftwareReader
 from backend.live_registry.startup_programs import StartupProgramsReader
 from backend.live_registry.usb_devices import USBDevicesReader
+from backend.live_registry.user_activity import UserActivityReader
 def print_system_info():
     """
     Print system information in readable format.
@@ -175,13 +176,87 @@ def print_startup_programs():
         print("-" * 70)
 
     print("\nStartup programs scan completed successfully.")
+def print_user_activity():
+    """
+    Print user activity artifacts in readable format.
+    """
+    reader = UserActivityReader()
+    data = reader.get_user_activity()
+
+    print("=" * 70)
+    print("User Activity Scan")
+    print("=" * 70)
+
+    print("RunMRU Commands Found :", data["runmru_count"])
+    print("Typed Paths Found     :", data["typed_paths_count"])
+    print("Recent Docs Found     :", data["recent_docs_count"])
+    print("UserAssist Items Found:", data["userassist_count"])
+    print("-" * 70)
+
+    print("\nRunMRU Commands:")
+    print("-" * 70)
+
+    if not data["runmru"]:
+        print("No RunMRU commands found.")
+    else:
+        for item in data["runmru"]:
+            print("Command Name :", item["command_name"])
+            print("Command      :", item["command"])
+            print("Registry Path:", item["registry_path"])
+            print("-" * 70)
+
+    print("\nTyped Paths:")
+    print("-" * 70)
+
+    if not data["typed_paths"]:
+        print("No typed paths found.")
+    else:
+        for item in data["typed_paths"]:
+            print("Value Name   :", item["value_name"])
+            print("Typed Path   :", item["typed_path"])
+            print("Registry Path:", item["registry_path"])
+            print("-" * 70)
+
+    print("\nRecent Documents:")
+    print("-" * 70)
+
+    if not data["recent_docs"]:
+        print("No recent documents found.")
+    else:
+        for item in data["recent_docs"][:30]:
+            print("Category     :", item["category"])
+            print("Value Name   :", item["value_name"])
+            print("Recent Item  :", item["recent_item"])
+            print("Registry Path:", item["registry_path"])
+            print("-" * 70)
+
+        if data["recent_docs_count"] > 30:
+            print(f"Showing first 30 of {data['recent_docs_count']} recent documents.")
+
+    print("\nUserAssist:")
+    print("-" * 70)
+
+    if not data["userassist"]:
+        print("No UserAssist items found.")
+    else:
+        for item in data["userassist"][:30]:
+            print("GUID         :", item["guid"])
+            print("Decoded Name :", item["decoded_name"])
+            print("Registry Path:", item["registry_path"])
+            print("-" * 70)
+
+        if data["userassist_count"] > 30:
+            print(f"Showing first 30 of {data['userassist_count']} UserAssist items.")
+
+    print("\nUser activity scan completed successfully.")
 def main():
     while True:
         print("1. System Information")
         print("2. Installed Software")
         print("3. Startup Programs")
         print("4. USB Devices")
-        print("5. Exit")
+        print("5. User Activity")
+        print("6. Exit")
 
         choice = input("\nEnter choice: ")
 
@@ -198,6 +273,9 @@ def main():
             print_usb_devices()
 
         elif choice == "5":
+            print_user_activity()
+
+        elif choice == "6":
             print("Exiting tool...")
             break
 
