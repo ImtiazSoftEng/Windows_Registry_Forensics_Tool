@@ -3,6 +3,9 @@ from backend.live_registry.installed_software import InstalledSoftwareReader
 from backend.live_registry.startup_programs import StartupProgramsReader
 from backend.live_registry.usb_devices import USBDevicesReader
 from backend.live_registry.user_activity import UserActivityReader
+from datetime import datetime
+from backend.reports.json_export import JSONExport
+from backend.reports.csv_export import CSVExport
 def print_system_info():
     """
     Print system information in readable format.
@@ -47,7 +50,55 @@ def print_system_info():
 
     print("\nSystem info scan completed successfully.")
 
+def generate_full_report():
+    """
+    Run all registry modules and export JSON + CSV reports.
+    """
+    print("=" * 70)
+    print("Full Registry Scan Started")
+    print("=" * 70)
 
+    print("Collecting system information...")
+    system_info = SystemInfoReader().get_system_info()
+
+    print("Collecting installed software...")
+    installed_software = InstalledSoftwareReader().get_installed_software()
+
+    print("Collecting startup programs...")
+    startup_programs = StartupProgramsReader().get_startup_programs()
+
+    print("Collecting USB devices...")
+    usb_devices = USBDevicesReader().read_usb_devices()
+
+    print("Collecting user activity...")
+    user_activity = UserActivityReader().get_user_activity()
+
+    report_data = {
+        "tool_name": "Portable Windows Registry Forensic Analyzer",
+        "tool_mode": "Live Registry Analysis",
+        "scan_time": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "system_info": system_info,
+        "installed_software": installed_software,
+        "startup_programs": startup_programs,
+        "usb_devices": usb_devices,
+        "user_activity": user_activity
+    }
+
+    print("\nSaving JSON report...")
+    json_exporter = JSONExport()
+    json_result = json_exporter.save_json(report_data)
+
+    print(json_result["message"])
+    print("JSON Path:", json_result["file_path"])
+
+    print("\nSaving CSV reports...")
+    csv_exporter = CSVExport()
+    csv_results = csv_exporter.save_all_csv_reports(report_data)
+
+    for result in csv_results:
+        print(result["message"], "->", result["file_path"])
+
+    print("\nFull report generation completed successfully.")
 def print_installed_software():
     """
     Print installed software list in readable format.
@@ -256,32 +307,35 @@ def main():
         print("3. Startup Programs")
         print("4. USB Devices")
         print("5. User Activity")
-        print("6. Exit")
+        print("6. Generate Full Report")
+        print("7. Exit")
 
         choice = input("\nEnter choice: ")
 
         if choice == "1":
-            print_system_info()
+         print_system_info()
 
         elif choice == "2":
-            print_installed_software()
+         print_installed_software()
 
         elif choice == "3":
-            print_startup_programs()
+         print_startup_programs()
 
         elif choice == "4":
-            print_usb_devices()
+          print_usb_devices()
 
         elif choice == "5":
-            print_user_activity()
+          print_user_activity()
 
         elif choice == "6":
-            print("Exiting tool...")
-            break
+         generate_full_report()
+
+        elif choice == "7":
+         print("Exiting tool...")
+         break
 
         else:
-            print("Invalid choice.")
-
+         print("Invalid choice.")
 
 if __name__ == "__main__":
     main()
