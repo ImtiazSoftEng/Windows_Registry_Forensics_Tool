@@ -5,7 +5,7 @@ from datetime import datetime
 
 class JSONExport:
     """
-    Export scan result into JSON file.
+    Export full registry scan data into JSON file.
     """
 
     def __init__(self, output_dir="output"):
