@@ -1,0 +1,8 @@
+program_name,command,registry_root,registry_path,scope,registry_view,value_type
+SecurityHealth,%windir%\system32\SecurityHealthSystray.exe,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,All Users,64-bit,REG_EXPAND_SZ
+RtkAudUService,"""C:\WINDOWS\System32\DriverStore\FileRepository\realtekservice.inf_amd64_e54441f6cc56b0cb\RtkAudUService64.exe"" -background",HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,All Users,64-bit,REG_SZ
+WavesSvc,"""C:\WINDOWS\System32\DriverStore\FileRepository\wavesapo12de.inf_amd64_f4d6230909497f9a\WavesSvc64.exe"" -Jack",HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,All Users,64-bit,REG_SZ
+vmware-tray.exe,"""C:\Program Files (x86)\VMware\VMware Workstation\vmware-tray.exe""",HKLM,SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run,All Users,32-bit,REG_SZ
+OneDrive,"""C:\Users\ali.imtiaz\AppData\Local\Microsoft\OneDrive\OneDrive.exe"" /background",HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,Current User,User,REG_SZ
+Teams,"""C:\Users\ali.imtiaz\AppData\Local\Microsoft\WindowsApps\MSTeams_8wekyb3d8bbwe\ms-teams.exe"" msteams:system-initiated",HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,Current User,User,REG_SZ
+MicrosoftEdgeAutoLaunch_FAD607CA14D6285255D120C2A2519FCC,"""C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"" --no-startup-window --win-session-start",HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,Current User,User,REG_SZ

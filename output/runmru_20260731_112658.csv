@@ -1,0 +1,5 @@
+command_name,command,type,registry_path
+a,sysdm.cpl,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+b,secpol.msc,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+c,cmd,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+d,\\fs01,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU

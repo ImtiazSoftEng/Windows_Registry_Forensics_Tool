@@ -1,0 +1,8 @@
+source,device_name,vendor,product,revision,serial_number,friendly_name,device_description,manufacturer,class_guid,last_write_time,registry_root,registry_path
+MountedDevices,\DosDevices\C:,,,,,,Mounted device or drive mapping,,,2026-07-06 10:06:02 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{a402c137-2153-11f0-a4a8-806e6f6e6963},,,,,,Mounted device or drive mapping,,,2026-07-06 10:06:02 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\D:,,,,,,Mounted device or drive mapping,,,2026-07-06 10:06:02 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\F:,,,,,,Mounted device or drive mapping,,,2026-07-06 10:06:02 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\E:,,,,,,Mounted device or drive mapping,,,2026-07-06 10:06:02 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{908da3b2-7915-11f1-a50a-4cd717964b96},,,,,,Mounted device or drive mapping,,,2026-07-06 10:06:02 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{908da496-7915-11f1-a50a-4cd717964b96},,,,,,Mounted device or drive mapping,,,2026-07-06 10:06:02 UTC,HKLM,SYSTEM\MountedDevices
