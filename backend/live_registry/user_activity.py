@@ -42,24 +42,34 @@ class UserActivityReader:
         """
         try:
             if not isinstance(data, bytes):
-                return data
+                return self.clean_text(data)
 
             text = data.decode("utf-16le", errors="ignore")
-            text = text.replace("\x00", " ")
+            text = text.replace("\x00", "|")
 
-            # Keep readable words, filenames, extensions
-            parts = re.findall(r"[A-Za-z0-9_\- .()&]+(?:\.[A-Za-z0-9]{2,6})?", text)
+            parts = text.split("|")
 
             clean_parts = []
 
             for part in parts:
-                part = part.strip()
+                part = self.clean_recent_doc_name(part)
 
-                if len(part) >= 3 and part not in clean_parts:
+                if not part:
+                    continue
+
+                if len(part) < 3:
+                    continue
+
+                # Skip useless symbols
+                if part in [".", "..", "-"]:
+                    continue
+
+                # Avoid duplicate values
+                if part not in clean_parts:
                     clean_parts.append(part)
 
             if clean_parts:
-                return " | ".join(clean_parts[:5])
+                return " | ".join(clean_parts[:3])
 
             return data.hex()
 
@@ -159,7 +169,7 @@ class UserActivityReader:
             if item["name"] != "MRUList":
                 run_commands.append({
                     "command_name": item["name"],
-                    "command": item["data"],
+                    "command": self.clean_text(item["data"]),
                     "type": item["type"],
                     "registry_path": item["registry_path"]
                 })
@@ -277,3 +287,52 @@ class UserActivityReader:
             "recent_docs": recent_docs,
             "userassist": userassist
         }
+    def clean_text(self, text):
+        """
+        Clean unwanted characters from registry text.
+        """
+        try:
+            if text is None:
+                return None
+
+            text = str(text)
+
+            # Remove null characters
+            text = text.replace("\x00", "")
+
+            # Remove RunMRU ending like \1, \2, \3
+            text = re.sub(r"\\[0-9]+$", "", text)
+
+            # Remove extra spaces
+            text = re.sub(r"\s+", " ", text)
+
+            return text.strip()
+
+        except Exception:
+            return text
+
+    def clean_recent_doc_name(self, text):
+        """
+        Clean RecentDocs extracted text.
+        """
+        try:
+            if text is None:
+                return None
+
+            text = str(text)
+            text = text.replace("\x00", " ")
+            text = re.sub(r"\s+", " ", text)
+
+            # Remove .lnk from recent shortcut names
+            text = re.sub(r"\.lnk", "", text, flags=re.IGNORECASE)
+
+            # Remove small noise like r2, t2, x2 at end
+            text = re.sub(r"\s+[a-zA-Z]2\b", "", text)
+
+            # Remove repeated dot spacing
+            text = text.replace(" . ", " ")
+
+            return text.strip()
+
+        except Exception:
+            return text
