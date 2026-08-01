@@ -1,0 +1,24 @@
+command_name,command,type,registry_path
+a,dxdiag,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+b,notepad,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+c,cmd,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+d,shutdown -h,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+e,shutdown -a,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+f,systeminfo,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+g,\,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+h,temp,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+i,services.msc,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+j,c:\Windows\System32\Drivers\etc\hosts,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+k,%ProgramData%\Microsoft\VisualStudio\Packages,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+l,control,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+m,%ProgramData%,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+n,sysdm.cpl,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+o,regedit,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+p,msinfo32,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+q,ncpa.cpl,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+r,powershell,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+s,explorer.exe,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+t,wf.msc,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+u,secpol.msc,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+v,gpedit.msc,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+w,eventvwr.msc,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU

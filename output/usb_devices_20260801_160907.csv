@@ -1,0 +1,23 @@
+source,device_name,vendor,product,revision,serial_number,friendly_name,device_description,manufacturer,class_guid,last_write_time,registry_root,registry_path
+USBSTOR,Disk&Ven_HP&Prod_USB_Flash_Drive&Rev_PMAP,HP,USB_Flash_Drive,PMAP,072148B99B05D319&0,HP USB Flash Drive USB Device,"@disk.inf,%disk_devdesc%;Disk drive","@disk.inf,%genmanufacturer%;(Standard disk drives)",{4d36e967-e325-11ce-bfc1-08002be10318},2026-05-14 08:18:02 UTC,HKLM,SYSTEM\CurrentControlSet\Enum\USBSTOR\Disk&Ven_HP&Prod_USB_Flash_Drive&Rev_PMAP\072148B99B05D319&0
+USBSTOR,Disk&Ven_PNY&Prod_USB_3.2.1_FD&Rev_PMAP,PNY,USB_3.2.1_FD,PMAP,071C419984532165&0,PNY USB 3.2.1 FD USB Device,"@disk.inf,%disk_devdesc%;Disk drive","@disk.inf,%genmanufacturer%;(Standard disk drives)",{4d36e967-e325-11ce-bfc1-08002be10318},2026-07-23 11:31:36 UTC,HKLM,SYSTEM\CurrentControlSet\Enum\USBSTOR\Disk&Ven_PNY&Prod_USB_3.2.1_FD&Rev_PMAP\071C419984532165&0
+MountedDevices,\??\Volume{2a299cbf-e9f4-11ef-8fa2-005056c00008},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{734c0b40-a758-11ef-8f92-8c8d282d9f10},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{734c0b43-a758-11ef-8f92-8c8d282d9f10},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\C:,,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\F:,,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{d8e4d079-403b-11f0-8ffc-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{f7884585-750d-11f0-900b-8c8d282d9f10},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{8b154f9c-96bc-11f0-9013-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{0878c535-a984-11f0-901c-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{422d7ea2-bd40-11f0-9029-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{8d49f5d8-df07-11f0-903d-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,#{8d49f860-df07-11f0-903d-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\D:,,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{a42d60bf-e3ca-11f0-903e-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{298e6b70-e971-11f0-903f-8c8d282d9f10},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{50eeeb33-0958-11f1-904b-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{50eeee56-0958-11f1-904b-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{4c568c09-4e0e-11f1-9062-8c8d282d9f14},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{699ef58e-6e42-11f1-9067-de390638708e},,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\E:,,,,,,Mounted device or drive mapping,,,2026-06-25 15:25:13 UTC,HKLM,SYSTEM\MountedDevices

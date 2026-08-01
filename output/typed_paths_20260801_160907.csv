@@ -1,0 +1,27 @@
+value_name,typed_path,type,registry_path
+url1,C:\Users\AT\Desktop\dfir_project\Windows_Registry_Forensics_Tool,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url2,Desktop,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url3,C:\Users\AT\Downloads\school_management_system (6)\school_management\templates,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url4,C:\,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url5,Downloads,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url6,C:\Users\AT\Downloads\catchub\catchub\images,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url7,C:\Users\AT\Desktop\DFIR _INTrsnhip,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url8,C:\Users\AT\Downloads\school_management\school_management\tools,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url9,C:\Users\AT\Downloads\school_management,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url10,C:\Users\AT\Downloads\school_management\school_management\issued_licenses,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url11,C:\Users\AT\Downloads\Al_Noor_School,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url12,C:\Users\AT\Downloads\school_management_system (7)\school_management\dist,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url13,C:\Users\AT\Downloads\king_international_school_FINAL,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url14,C:\masm615,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url15,C:\Users\AT\Desktop\AI-Project,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url16,C:\Program Files\Labcenter Electronics\Proteus 9 Professional\Bin,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url17,C:\Users\AT\Desktop\Artificial Intelligence\phases,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url18,C:\Users\AT\Desktop\myfiles\ybdayallfiiles,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url19,C:\Users\AT\Desktop\myfiles\ybdayallfiiles\backups\birthday final,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url20,C:\Users\AT\Desktop\myfiles\ybdayallfiiles\backups\ybday-3.0,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url21,C:\Users\AT\Desktop\myfiles\ybdayallfiiles\backups\YbdayFinal,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url22,C:\Users\AT\Desktop\myfiles\ybdayallfiiles\domination\ybday-4.0,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url23,C:\Users\AT\Desktop\inforsec,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url24,C:\Users\AT\Documents\Arduino,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url25,C:\Users\AT\Documents\Arduino\hardware\espressif\esp32\tools,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
+url26,C:\Users\AT\AppData\Local\Arduino15,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\TypedPaths
