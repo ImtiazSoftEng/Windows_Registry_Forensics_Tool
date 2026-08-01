@@ -4,9 +4,6 @@ import winreg
 class StartupProgramsReader:
     """
     Reads startup programs from live Windows Registry using winreg.
-
-    Startup programs are applications that run automatically
-    when Windows starts or when the user logs in.
     """
 
     def __init__(self):
@@ -34,6 +31,21 @@ class StartupProgramsReader:
             }
         ]
 
+    def get_value_type_name(self, value_type):
+        """
+        Convert registry value type into readable name.
+        """
+        types = {
+            winreg.REG_SZ: "REG_SZ",
+            winreg.REG_DWORD: "REG_DWORD",
+            winreg.REG_BINARY: "REG_BINARY",
+            winreg.REG_MULTI_SZ: "REG_MULTI_SZ",
+            winreg.REG_EXPAND_SZ: "REG_EXPAND_SZ",
+            winreg.REG_QWORD: "REG_QWORD",
+        }
+
+        return types.get(value_type, str(value_type))
+
     def read_startup_from_location(self, location):
         """
         Read startup programs from one registry location.
@@ -57,15 +69,14 @@ class StartupProgramsReader:
                     startup_info = {
                         "program_name": name,
                         "command": command,
-                        "registry_root": location["root_name"],
-                        "registry_path": location["path"],
                         "scope": location["scope"],
                         "registry_view": location["view"],
+                        "registry_root": location["root_name"],
+                        "registry_path": location["path"],
                         "value_type": self.get_value_type_name(value_type)
                     }
 
                     startup_list.append(startup_info)
-
                     index += 1
 
                 except OSError:
@@ -73,32 +84,16 @@ class StartupProgramsReader:
 
             winreg.CloseKey(key)
 
+        except FileNotFoundError:
+            pass
+
         except PermissionError:
             print(f"Permission denied: {location['root_name']}\\{location['path']}")
-
-        except FileNotFoundError:
-            # This is normal. Some systems may not have this path.
-            pass
 
         except Exception as error:
             print(f"Error reading startup programs: {error}")
 
         return startup_list
-
-    def get_value_type_name(self, value_type):
-        """
-        Convert registry value type into readable name.
-        """
-        types = {
-            winreg.REG_SZ: "REG_SZ",
-            winreg.REG_DWORD: "REG_DWORD",
-            winreg.REG_BINARY: "REG_BINARY",
-            winreg.REG_MULTI_SZ: "REG_MULTI_SZ",
-            winreg.REG_EXPAND_SZ: "REG_EXPAND_SZ",
-            winreg.REG_QWORD: "REG_QWORD",
-        }
-
-        return types.get(value_type, str(value_type))
 
     def get_startup_programs(self):
         """
