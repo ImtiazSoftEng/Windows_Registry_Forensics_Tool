@@ -1,0 +1,8 @@
+command_name,command,type,registry_path
+a,diskmgmt.msc,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+b,gpedit.msc,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+c,cmd,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+d,regedit,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+e,eventvwr,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+f,ms-settings:developers,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU
+g,services.msc,REG_SZ,Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU

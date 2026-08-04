@@ -1,0 +1,20 @@
+field,value
+tool_mode,Live Registry Analysis
+admin_status,False
+computer_name,DESKTOP-NIS506Q
+windows_info.product_name,Windows 10 Pro
+windows_info.display_version,24H2
+windows_info.current_build,26100
+windows_info.ubr,8875
+windows_info.edition_id,Professional
+windows_info.install_date,2025-10-03 14:53:20
+windows_info.system_root,C:\WINDOWS
+timezone_info.time_zone,Pakistan Standard Time
+timezone_info.standard_name,"@tzres.dll,-872"
+user_info.username,Boss
+user_info.user_domain,DESKTOP-NIS506Q
+user_info.user_profile,C:\Users\Boss
+user_info.computer_name_env,DESKTOP-NIS506Q
+architecture,64bit
+processor,"Intel64 Family 6 Model 140 Stepping 1, GenuineIntel"
+machine,AMD64

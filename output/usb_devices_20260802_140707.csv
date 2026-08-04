@@ -1,0 +1,9 @@
+source,device_name,vendor,product,revision,serial_number,friendly_name,device_description,manufacturer,class_guid,last_write_time,registry_root,registry_path
+USBSTOR,Disk&Ven_Generic&Prod_Flash_Disk&Rev_8.07,Generic,Flash_Disk,8.07,8E8BE137&0,Generic Flash Disk USB Device,"@disk.inf,%disk_devdesc%;Disk drive","@disk.inf,%genmanufacturer%;(Standard disk drives)",{4d36e967-e325-11ce-bfc1-08002be10318},2026-07-06 13:11:52 UTC,HKLM,SYSTEM\CurrentControlSet\Enum\USBSTOR\Disk&Ven_Generic&Prod_Flash_Disk&Rev_8.07\8E8BE137&0
+MountedDevices,\DosDevices\C:,,,,,,Mounted device or drive mapping,,,2026-07-06 13:11:52 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\E:,,,,,,Mounted device or drive mapping,,,2026-07-06 13:11:52 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\D:,,,,,,Mounted device or drive mapping,,,2026-07-06 13:11:52 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{465d1936-cde0-11f0-9a2a-88d82ebb108d},,,,,,Mounted device or drive mapping,,,2026-07-06 13:11:52 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{72e9f6fc-f927-11f0-9a31-928da70b1686},,,,,,Mounted device or drive mapping,,,2026-07-06 13:11:52 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\??\Volume{cbff467d-267e-11f1-9a3a-88d82ebb108d},,,,,,Mounted device or drive mapping,,,2026-07-06 13:11:52 UTC,HKLM,SYSTEM\MountedDevices
+MountedDevices,\DosDevices\F:,,,,,,Mounted device or drive mapping,,,2026-07-06 13:11:52 UTC,HKLM,SYSTEM\MountedDevices

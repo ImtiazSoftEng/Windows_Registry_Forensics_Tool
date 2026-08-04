@@ -1,0 +1,11 @@
+program_name,command,scope,registry_view,registry_root,registry_path,value_type
+SecurityHealth,%windir%\system32\SecurityHealthSystray.exe,All Users,64-bit,HKLM,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_EXPAND_SZ
+vmware-tray.exe,"""C:\Program Files (x86)\VMware\VMware Workstation\vmware-tray.exe""",All Users,32-bit,HKLM,SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+OneDrive,"""C:\Users\Boss\AppData\Local\Microsoft\OneDrive\OneDrive.exe"" /background",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+Mozilla-Firefox-308046B0AF4A39CB,"""C:\Program Files\Mozilla Firefox\firefox.exe"" -os-autostart",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+Figma Agent,"""C:\Users\Boss\AppData\Local\FigmaAgent\figma_agent.exe""",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+Simple Sticky Notes,C:\Program Files (x86)\Simnet\Simple Sticky Notes\ssn.exe,Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+electron.app.Loom,"C:\Users\Boss\AppData\Local\Programs\Loom\Loom.exe --process-start-args ""--loomHidden""",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+Teams,"""C:\Users\Boss\AppData\Local\Microsoft\WindowsApps\MSTeams_8wekyb3d8bbwe\ms-teams.exe"" msteams:system-initiated",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+GoogleChromeAutoLaunch_E5670BDA6DED723847B903C5CED5605F,"""C:\Program Files\Google\Chrome\Application\chrome.exe"" --no-startup-window /prefetch:5",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
+MicrosoftEdgeAutoLaunch_B14DBBE1EF03929244E921C90BE13BF3,"""C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"" --no-startup-window --win-session-start",Current User,User,HKCU,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,REG_SZ
